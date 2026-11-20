@@ -45,6 +45,7 @@
   <ItemGroup>
     <Compile Include="DeviceManager.cs" />
     <Compile Include="IAdjustable.cs" />
+    <Compile Include="IEnergyConsumer.cs" />
     <Compile Include="ISchedulable.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

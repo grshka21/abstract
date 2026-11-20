@@ -17,5 +17,8 @@ namespace SmartHomeApp
 
         public override string GetStatus() =>
             $"Лампа [{Name}]: {(IsOn ? "вкл" : "выкл")}, яркость {Brightness}%";
+        public double PowerConsumptionWatt => 10;
+        public double CalculateDailyConsumption() => PowerConsumptionWatt * 8 / 1000.0;
+
     }
 }
