@@ -16,5 +16,12 @@ namespace SmartHomeApp
             foreach (var d in _devices)
                 if (d is IAdjustable a) a.SetLevel(level);
         }
+
+        public void PrintScheduledDevices()
+        {
+            foreach (var d in _devices)
+                if (d is ISchedulable s && (s.ScheduledOn.HasValue || s.ScheduledOff.HasValue))
+                    Console.WriteLine($"{d.Name}: вкл в {s.ScheduledOn}, выкл в {s.ScheduledOff}");
+        }
     }
 }
