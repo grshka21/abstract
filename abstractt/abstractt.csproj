@@ -43,8 +43,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DeviceManager.cs" />
+    <Compile Include="IAdjustable.cs" />
+    <Compile Include="IEnergyConsumer.cs" />
+    <Compile Include="ISchedulable.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SmartDevice.cs" />
+    <Compile Include="SmartFan.cs" />
+    <Compile Include="SmartLight.cs" />
+    <Compile Include="SmartThermostat.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
