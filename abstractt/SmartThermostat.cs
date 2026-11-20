@@ -17,5 +17,8 @@ namespace SmartHomeApp
 
         public override string GetStatus() =>
             $"Термостат [{Name}]: {(IsOn ? "вкл" : "выкл")}, цель {TargetTemperature}°C";
+        public double PowerConsumptionWatt => 500;
+        public double CalculateDailyConsumption() => PowerConsumptionWatt * 12 / 1000.0;
+
     }
 }

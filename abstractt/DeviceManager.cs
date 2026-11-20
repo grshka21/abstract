@@ -23,5 +23,13 @@ namespace SmartHomeApp
                 if (d is ISchedulable s && (s.ScheduledOn.HasValue || s.ScheduledOff.HasValue))
                     Console.WriteLine($"{d.Name}: вкл в {s.ScheduledOn}, выкл в {s.ScheduledOff}");
         }
+
+        public void PrintTotalEnergy()
+        {
+            double total = 0;
+            foreach (var d in _devices)
+                if (d is IEnergyConsumer c) total += c.CalculateDailyConsumption();
+            Console.WriteLine($"Суммарное потребление за сутки: {total:F2} кВт·ч");
+        }
     }
 }
